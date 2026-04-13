@@ -1,0 +1,24 @@
+{
+  "name": "inventory-management-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Stock control toolkit for AI agents: reorder point calculation, demand forecasting,",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/inventory-management-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "reorder_point",
+    "demand_forecast",
+    "sku_optimizer",
+    "warehouse_layout",
+    "shrinkage_detector"
+  ],
+  "categories": [
+    "Business",
+    "Inventory"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
