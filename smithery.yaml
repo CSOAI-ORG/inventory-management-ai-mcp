@@ -1,10 +1,61 @@
 name: inventory-management-ai-mcp
-description: "MEOK AI Labs — Stock control toolkit for AI agents: reorder point calculation, demand forecasting,"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/inventory-management-ai-mcp
-license: MIT
-categories: [Business, Inventory]
-tags: [inventory, stock-management, warehouse, supply-chain, inventory-tracking]
-runtime: python
-entrypoint: server.py
+description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+version: 1.0.0
+tools:
+- name: reorder_point
+  description: Calculate optimal reorder point, safety stock, and economic order quantity
+  parameters:
+  - name: avg_daily_demand
+    type: number
+    required: true
+  - name: lead_time_days
+    type: integer
+    required: false
+  - name: safety_stock_days
+    type: integer
+    required: false
+  - name: service_level
+    type: number
+    required: false
+  - name: demand_std_dev
+    type: number
+    required: false
+- name: demand_forecast
+  description: Forecast future demand from historical sales data with confidence intervals.
+  parameters:
+  - name: historical_data
+    type: array
+    required: true
+  - name: periods_ahead
+    type: integer
+    required: false
+  - name: method
+    type: string
+    required: false
+  - name: seasonality_period
+    type: integer
+    required: false
+- name: sku_optimizer
+  description: Classify SKUs using ABC/XYZ analysis and recommend inventory strategies.
+  parameters:
+  - name: skus
+    type: array
+    required: true
+- name: warehouse_layout
+  description: Plan warehouse zone layout optimized for picking efficiency.
+  parameters:
+  - name: zones
+    type: array
+    required: true
+  - name: total_sqft
+    type: number
+    required: false
+  - name: picking_method
+    type: string
+    required: false
+- name: shrinkage_detector
+  description: Detect inventory shrinkage by comparing expected vs actual quantities.
+  parameters:
+  - name: inventory_records
+    type: array
+    required: true

@@ -11,6 +11,11 @@ Install: pip install mcp
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import math
 import statistics
 from collections import defaultdict
@@ -435,7 +440,7 @@ mcp = FastMCP(
 @mcp.tool()
 def reorder_point(avg_daily_demand: float, lead_time_days: int = 7,
                   safety_stock_days: int = 3, service_level: float = 0.95,
-                  demand_std_dev: float = 0.0) -> dict:
+                  demand_std_dev: float = 0.0, api_key: str = "") -> dict:
     """Calculate optimal reorder point, safety stock, and economic order quantity
     using statistical service level targeting.
 
@@ -446,6 +451,10 @@ def reorder_point(avg_daily_demand: float, lead_time_days: int = 7,
         service_level: Target service level (0.90, 0.95, 0.97, 0.99, 0.999)
         demand_std_dev: Standard deviation of daily demand (0 = use safety_stock_days instead)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -458,7 +467,7 @@ def reorder_point(avg_daily_demand: float, lead_time_days: int = 7,
 @mcp.tool()
 def demand_forecast(historical_data: list[float], periods_ahead: int = 6,
                     method: str = "exponential_smoothing",
-                    seasonality_period: int = 12) -> dict:
+                    seasonality_period: int = 12, api_key: str = "") -> dict:
     """Forecast future demand from historical sales data with confidence intervals.
 
     Args:
@@ -467,6 +476,10 @@ def demand_forecast(historical_data: list[float], periods_ahead: int = 6,
         method: Forecasting method (moving_average, exponential_smoothing, linear_trend, seasonal)
         seasonality_period: Period length for seasonal method (e.g. 12 for monthly data)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -477,12 +490,16 @@ def demand_forecast(historical_data: list[float], periods_ahead: int = 6,
 
 
 @mcp.tool()
-def sku_optimizer(skus: list[dict]) -> dict:
+def sku_optimizer(skus: list[dict], api_key: str = "") -> dict:
     """Classify SKUs using ABC/XYZ analysis and recommend inventory strategies.
 
     Args:
         skus: List of SKUs as [{"sku": "ABC123", "revenue": 50000, "quantity": 200, "cost": 50, "demand_cv": 0.3}]
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -494,7 +511,7 @@ def sku_optimizer(skus: list[dict]) -> dict:
 
 @mcp.tool()
 def warehouse_layout(zones: list[dict], total_sqft: float = 10000,
-                     picking_method: str = "zone") -> dict:
+                     picking_method: str = "zone", api_key: str = "") -> dict:
     """Plan warehouse zone layout optimized for picking efficiency.
 
     Args:
@@ -502,6 +519,10 @@ def warehouse_layout(zones: list[dict], total_sqft: float = 10000,
         total_sqft: Total warehouse square footage
         picking_method: Picking strategy (wave, zone, batch, discrete)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -512,13 +533,17 @@ def warehouse_layout(zones: list[dict], total_sqft: float = 10000,
 
 
 @mcp.tool()
-def shrinkage_detector(inventory_records: list[dict]) -> dict:
+def shrinkage_detector(inventory_records: list[dict], api_key: str = "") -> dict:
     """Detect inventory shrinkage by comparing expected vs actual quantities.
     Flags anomalies and provides category-level analysis.
 
     Args:
         inventory_records: Records as [{"sku": "X", "expected_qty": 100, "actual_qty": 95, "value_per_unit": 25.0, "category": "electronics"}]
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
