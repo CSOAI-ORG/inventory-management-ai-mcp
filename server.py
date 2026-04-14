@@ -429,8 +429,7 @@ def _shrinkage_detector(inventory_records: list[dict]) -> dict:
 # ---------------------------------------------------------------------------
 mcp = FastMCP(
     "Inventory Management AI MCP",
-    instructions="Stock control toolkit: reorder points, demand forecasting, SKU optimization, warehouse layout, and shrinkage detection. By MEOK AI Labs.",
-)
+    instructions="Stock control toolkit: reorder points, demand forecasting, SKU optimization, warehouse layout, and shrinkage detection. By MEOK AI Labs.")
 
 
 @mcp.tool()
