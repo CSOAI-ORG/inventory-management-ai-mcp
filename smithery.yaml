@@ -1,5 +1,6 @@
 name: inventory-management-ai-mcp
-description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+description: 'Stock control toolkit: reorder points, demand forecasting, SKU optimization,
+  warehouse layout, and s'
 version: 1.0.0
 tools:
 - name: reorder_point
@@ -24,7 +25,7 @@ tools:
   description: Forecast future demand from historical sales data with confidence intervals.
   parameters:
   - name: historical_data
-    type: array
+    type: number
     required: true
   - name: periods_ahead
     type: integer

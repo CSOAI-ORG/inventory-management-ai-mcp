@@ -1,6 +1,6 @@
 {
   "name": "inventory-management-ai-mcp",
-  "description": "**By MEOK AI Labs** | [meok.ai](https://meok.ai)",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Stock control toolkit: reorder points, demand forecasting, SKU optimization, warehouse layout, and s",
   "version": "1.0.0",
   "tools": [
     {
@@ -37,10 +37,7 @@
         "type": "object",
         "properties": {
           "historical_data": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
+            "type": "number"
           },
           "periods_ahead": {
             "type": "integer"
@@ -64,10 +61,7 @@
         "type": "object",
         "properties": {
           "skus": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           }
         },
         "required": [
@@ -82,10 +76,7 @@
         "type": "object",
         "properties": {
           "zones": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "total_sqft": {
             "type": "number"
@@ -106,10 +97,7 @@
         "type": "object",
         "properties": {
           "inventory_records": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           }
         },
         "required": [
