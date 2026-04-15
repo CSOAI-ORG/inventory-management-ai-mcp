@@ -1,6 +1,6 @@
 {
   "name": "inventory-management-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Stock control toolkit: reorder points, demand forecasting, SKU optimization, warehouse layout, and s",
+  "description": "MCP server for inventory management ai. Features reorder point, demand forecast, sku optimizer. From MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
