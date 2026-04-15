@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/inventory-management-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+inventory_management_ai_mcp = "server:main"

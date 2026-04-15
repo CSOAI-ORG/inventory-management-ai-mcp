@@ -1,0 +1,10 @@
+{
+  "name": "inventory-management-ai-mcp",
+  "description": "MEOK AI Labs \u2014 inventory-management-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/inventory-management-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
