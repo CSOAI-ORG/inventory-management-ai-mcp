@@ -1,53 +1,38 @@
-# Inventory Management AI MCP Server
-**By MEOK AI Labs** | [meok.ai](https://meok.ai)
+<div align="center">
 
-Stock control toolkit: reorder points, demand forecasting, SKU optimization, warehouse layout, and shrinkage detection.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/inventory-management-ai-mcp)](https://github.com/CSOAI-ORG/inventory-management-ai-mcp/stargazers)
 
-## Tools
+# uinventoryU managementU aiU mcp
 
-| Tool | Description |
-|------|-------------|
-| `reorder_point` | Calculate reorder point, safety stock, and economic order quantity |
-| `demand_forecast` | Forecast demand with moving average, exponential smoothing, or trend |
-| `sku_optimizer` | ABC/XYZ classification with inventory strategy recommendations |
-| `warehouse_layout` | Plan warehouse zones optimized for picking efficiency |
-| `shrinkage_detector` | Detect inventory shrinkage anomalies with category analysis |
+****By MEOK AI Labs** | [meok.ai](https://meok.ai)**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/inventory-management-ai-mcp)](https://www.npmjs.com/package/@meok-ai/inventory-management-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/inventory-management-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
-pip install mcp
+pip install inventory-management-ai-mcp
+# or
+npm install -g @meok-ai/inventory-management-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-### Run the server
+See the project repository for full documentation and examples.
 
-```bash
-python server.py
-```
+## Enterprise Support
 
-### Claude Desktop config
-
-```json
-{
-  "mcpServers": {
-    "inventory-management": {
-      "command": "python",
-      "args": ["/path/to/inventory-management-ai-mcp/server.py"]
-    }
-  }
-}
-```
-
-## Pricing
-
-| Tier | Limit | Price |
-|------|-------|-------|
-| Free | 30 calls/day | $0 |
-| Pro | Unlimited + premium features | $9/mo |
-| Enterprise | Custom + SLA + support | Contact us |
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT
+MIT © [CSOAI](https://csoai.org)
