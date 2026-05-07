@@ -1,3 +1,7 @@
+[![inventory-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/inventory-management-ai-mcp)](https://pypi.org/project/inventory-management-ai-mcp/)
+
 [![inventory-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp)
 
 <div align="center">
