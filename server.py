@@ -450,6 +450,21 @@ def reorder_point(avg_daily_demand: float, lead_time_days: int = 7,
         safety_stock_days: Buffer days of safety stock
         service_level: Target service level (0.90, 0.95, 0.97, 0.99, 0.999)
         demand_std_dev: Standard deviation of daily demand (0 = use safety_stock_days instead)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -475,6 +490,21 @@ def demand_forecast(historical_data: list[float], periods_ahead: int = 6,
         periods_ahead: Number of periods to forecast (1-52)
         method: Forecasting method (moving_average, exponential_smoothing, linear_trend, seasonal)
         seasonality_period: Period length for seasonal method (e.g. 12 for monthly data)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -495,6 +525,21 @@ def sku_optimizer(skus: list[dict], api_key: str = "") -> dict:
 
     Args:
         skus: List of SKUs as [{"sku": "ABC123", "revenue": 50000, "quantity": 200, "cost": 50, "demand_cv": 0.3}]
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -518,6 +563,21 @@ def warehouse_layout(zones: list[dict], total_sqft: float = 10000,
         zones: Warehouse zones as [{"name": "Electronics", "sku_count": 200, "daily_picks": 500, "storage_type": "shelf"}]
         total_sqft: Total warehouse square footage
         picking_method: Picking strategy (wave, zone, batch, discrete)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -539,6 +599,21 @@ def shrinkage_detector(inventory_records: list[dict], api_key: str = "") -> dict
 
     Args:
         inventory_records: Records as [{"sku": "X", "expected_qty": 100, "actual_qty": 95, "value_per_unit": 25.0, "category": "electronics"}]
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
