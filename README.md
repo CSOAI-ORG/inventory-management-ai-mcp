@@ -1,3 +1,5 @@
+[![inventory-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/inventory-management-ai-mcp)](https://github.com/CSOAI-ORG/inventory-management-ai-mcp/stargazers)
