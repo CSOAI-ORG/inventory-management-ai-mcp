@@ -1,45 +1,59 @@
-[![inventory-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/inventory-management-ai-mcp)](https://pypi.org/project/inventory-management-ai-mcp/)
-
-[![inventory-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/inventory-management-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/inventory-management-ai-mcp)](https://github.com/CSOAI-ORG/inventory-management-ai-mcp/stargazers)
+# Inventory Management Ai MCP
 
-# uinventoryU managementU aiU mcp
+**MCP server for inventory management ai mcp operations**
 
-****By MEOK AI Labs** | [meok.ai](https://meok.ai)**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/inventory-management-ai-mcp)](https://www.npmjs.com/package/@meok-ai/inventory-management-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-inventory-management-ai-mcp)](https://pypi.org/project/meok-inventory-management-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/inventory-management-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Inventory Management Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `reorder_point` | Calculate optimal reorder point, safety stock, and economic order quantity |
+| `demand_forecast` | Forecast future demand from historical sales data with confidence intervals. |
+| `sku_optimizer` | Classify SKUs using ABC/XYZ analysis and recommend inventory strategies. |
+| `warehouse_layout` | Plan warehouse zone layout optimized for picking efficiency. |
+| `shrinkage_detector` | Detect inventory shrinkage by comparing expected vs actual quantities. |
 
 ## Installation
 
 ```bash
-pip install inventory-management-ai-mcp
-# or
-npm install -g @meok-ai/inventory-management-ai-mcp
+pip install meok-inventory-management-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "inventory-management-ai-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_inventory_management_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 5 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/inventory-management-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
