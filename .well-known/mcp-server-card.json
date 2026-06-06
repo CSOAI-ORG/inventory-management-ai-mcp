@@ -1,0 +1,28 @@
+{
+  "name": "inventory-management-ai-mcp",
+  "title": "Inventory Management Ai Mcp",
+  "description": "MCP server for inventory management ai. Features reorder point, demand forecast, sku optimizer. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "reorder_point"
+    },
+    {
+      "name": "demand_forecast"
+    },
+    {
+      "name": "sku_optimizer"
+    },
+    {
+      "name": "warehouse_layout"
+    },
+    {
+      "name": "shrinkage_detector"
+    }
+  ]
+}

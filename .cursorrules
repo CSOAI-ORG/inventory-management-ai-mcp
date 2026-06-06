@@ -1,0 +1,9 @@
+# inventory-management-ai-mcp - Auto-trigger Rules
+
+When the user asks about inventory management, use inventory-management-ai-mcp tools: reorder_point, demand_forecast, sku_optimizer, warehouse_layout, shrinkage_detector
+
+**MCP server for inventory management ai mcp operations**
+
+Install: `pip install inventory-management-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

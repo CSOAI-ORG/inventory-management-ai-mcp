@@ -1,0 +1,36 @@
+# inventory-management-ai-mcp
+# **MCP server for inventory management ai mcp operations**
+
+## Install
+```bash
+pip install inventory-management-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `reorder_point`
+Calculate optimal reorder point, safety stock, and economic order quantity
+
+### `demand_forecast`
+Forecast future demand from historical sales data with confidence intervals.
+
+### `sku_optimizer`
+Classify SKUs using ABC/XYZ analysis and recommend inventory strategies.
+
+### `warehouse_layout`
+Plan warehouse zone layout optimized for picking efficiency.
+
+### `shrinkage_detector`
+Detect inventory shrinkage by comparing expected vs actual quantities.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
