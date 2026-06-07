@@ -1,0 +1,68 @@
+{
+  "name": "inventory-management-ai-mcp",
+  "description": "Inventory Management Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/inventory-management-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "reorder_point",
+      "name": "Reorder Point",
+      "description": "reorder_point via inventory-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "demand_forecast",
+      "name": "Demand Forecast",
+      "description": "demand_forecast via inventory-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "sku_optimizer",
+      "name": "Sku Optimizer",
+      "description": "sku_optimizer via inventory-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "warehouse_layout",
+      "name": "Warehouse Layout",
+      "description": "warehouse_layout via inventory-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "shrinkage_detector",
+      "name": "Shrinkage Detector",
+      "description": "shrinkage_detector via inventory-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

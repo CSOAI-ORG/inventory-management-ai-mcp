@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "inventory-management-ai-mcp",
+    "description": "Inventory Management Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "inventory-management-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "reorder_point",
+      "demand_forecast",
+      "sku_optimizer",
+      "warehouse_layout",
+      "shrinkage_detector"
+    ]
+  }
+}
