@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "inventory-management-ai-mcp"
-version = "1.0.6"
+version = "1.0.8"
 readme = "README.md"
 description = "MCP server for inventory management ai. Features reorder point, demand forecast, sku optimizer. From MEOK AI Labs."
 license = {file = "LICENSE"}
