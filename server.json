@@ -4,9 +4,8 @@
   "version": "1.0.8",
   "description": "Inventory Management Ai MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/inventory-management-ai-mcp",
-    "source": "https://github.com/CSOAI-ORG/inventory-management-ai-mcp"
+    "source": "github"
   },
   "packages": [
     {
